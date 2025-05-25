@@ -185,7 +185,7 @@ members.push({
 });
 members.push({
     name: "Sutula",
-    phone: "1234567890",
+    phone: "8984040716",
     img: "images/members/Sutula.jpg"
 });
 const memberCards = document.getElementById("memberCards");
