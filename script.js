@@ -143,7 +143,7 @@ members.push({
     img: "images/members/Sankara.png"
 });
 members.push({
-    name: "Tapas Kar",
+    name: "Tapas Ranjan Kar",
     phone: "6372771841",
     img: "images/members/Tapas.jpg"
 });
@@ -168,12 +168,12 @@ members.push({
     img: "images/members/Litu.jpg"
 });
 members.push({
-    name: "Rusi Panda",
+    name: "Rusiprasad Panda",
     phone: "7750899689",
     img: "images/members/RushiPanda.png"
 });
 members.push({
-    name: "Ranga",
+    name: "Smruti Ranjan Kar",
     phone: "7750899689",
     img: "images/members/Ranga.png"
 });
@@ -188,7 +188,7 @@ members.push({
     img: "images/members/Pabana.png"
 });
 members.push({
-    name: "Sutula",
+    name: "Dipak Kar",
     phone: "8984040716",
     img: "images/members/Sutula.jpg"
 });
