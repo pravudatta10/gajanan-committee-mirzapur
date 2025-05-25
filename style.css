@@ -41,7 +41,7 @@ body {
     border-radius: 8px;
     padding: 8px 16px;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 10px;
     color: black;
 }
 
@@ -154,29 +154,44 @@ section.visible {
 
 /* Image Modal Styles */
 .image-modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.8);
-    display: none;
-    justify-content: center;
-    align-items: center;
-    z-index: 1050;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #fbc2eb, #a1c4fd, #c2e9fb);
+  background-size: 400% 400%;
+  animation: animateModalBg 15s ease infinite;
+  z-index: 1050;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.image-modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
 }
 
 .image-modal {
-    position: relative;
-    max-width: 90%;
-    max-height: 90%;
+  width: 90vw;
+  max-width: 800px;
+  height: auto;
+  max-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at center, #ff8c00, #ffd700, #dd63a4, #00bcd4, #8bc34a, #ff4081);
+  border-radius: 12px;
+  padding: 1rem;
+  overflow: hidden;
 }
 
-.image-modal img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
+
 
 .prev-btn,
 .next-btn {
@@ -297,53 +312,82 @@ section.visible {
     border-radius: 8px;
 }
 
-.prev-btn,
-.next-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(255, 255, 255, 0.7);
-    border: none;
-    font-size: 24px;
-    padding: 10px 15px;
-    cursor: pointer;
-    z-index: 10;
+.prev-btn, .next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  font-size: 24px;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
 }
-
-.prev-btn {
-    left: 10px;
-}
-
-.next-btn {
-    right: 10px;
-}
+.prev-btn { left: 10px; }
+.next-btn { right: 10px; }
 
 .close-btn {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 28px;
-    color: white;
-    cursor: pointer;
-    z-index: 11;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 28px;
+  color: white;
+  background: rgba(0, 0, 0, 0.6);
+  border: none;
+  border-radius: 50%;
+  padding: 5px 10px;
+  cursor: pointer;
+  z-index: 11;
 }
 
-.image-modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #fbc2eb, #a1c4fd, #c2e9fb);
-    background-size: 400% 400%;
-    animation: animateModalBg 15s ease infinite;
-    display: none;
-    justify-content: center;
-    align-items: center;
-    z-index: 1050;
+
+/* .image-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #fbc2eb, #a1c4fd, #c2e9fb);
+  background-size: 400% 400%;
+  animation: animateModalBg 15s ease infinite;
+  display: flex;  
+  justify-content: center;
+  align-items: center;
+  z-index: 1050;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
 }
 
-@keyframes animateModalBg {
+.image-modal-overlay.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.image-modal {
+  width: 90vw;
+  max-width: 800px;
+  height: auto;
+  max-height: 80vh;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.image-modal img {
+  max-width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+} */
+
+
+/* @keyframes animateModalBg {
     0% {
         background-position: 0% 50%;
     }
@@ -355,7 +399,7 @@ section.visible {
     100% {
         background-position: 0% 50%;
     }
-}
+} */
 
 #pdfCollection .card {
     width: 100%;
@@ -470,4 +514,26 @@ section.visible {
         transform: scale(1.1);
         opacity: 0.9;
     }
+}
+@media (max-width: 576px) {
+  .image-modal {
+    width: 95%;
+    max-width: 100%;
+    max-height: 90vh;
+    padding: 0.5rem;
+  }
+
+  .image-modal img {
+    max-height: 50vh;
+  }
+
+  .prev-btn, .next-btn {
+    font-size: 20px;
+    padding: 6px;
+  }
+
+  .close-btn {
+    font-size: 22px;
+    padding: 4px 8px;
+  }
 }

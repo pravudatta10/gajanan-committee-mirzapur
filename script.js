@@ -103,7 +103,10 @@ document.addEventListener("click", e => {
         totalSlides = totalSlidesMap[currentYear] || 0;
         currentSlide = 1;
         showSlide();
-        overlay.style.display = "flex";
+        // overlay.style.display = "flex";
+        setTimeout(() => {
+  overlay.classList.add("active");
+}, 50);
         autoAdvance = setInterval(() => nextSlide(), 5000);
     }
 });
@@ -127,7 +130,8 @@ function prevSlide() {
     showSlide();
 }
 function closeImageModal() {
-    overlay.style.display = "none";
+    // overlay.style.display = "none";
+    overlay.classList.remove("active");
     clearInterval(autoAdvance);
 }
 
