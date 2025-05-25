@@ -196,7 +196,8 @@ members.forEach((m, i) => {
       <div class="card text-center festive-card" style="background: ${bg}; background-size: 200% 200%; animation: gradientShift 10s ease infinite;">
         <img src="${m.img}" class="card-img-top" alt="${m.name}">
         <div class="card-body">
-          <h5>${m.name}</h5>
+          <h5>${m.phone}</h5>
+          <h5>${m.name}</h5>          
         </div>
       </div>
     </div>
