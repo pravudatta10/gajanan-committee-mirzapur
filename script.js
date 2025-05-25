@@ -443,3 +443,41 @@ const nameObserver = new IntersectionObserver(entries => {
 
 // Observe each name element
 document.querySelectorAll(".typing-text").forEach(el => nameObserver.observe(el));
+
+function waitForImagesToLoad(containerId, callback) {
+    const container = document.getElementById(containerId);
+    const images = container.querySelectorAll("img");
+    let loadedCount = 0;
+
+    if (images.length === 0) {
+        callback();
+        return;
+    }
+
+    images.forEach(img => {
+        if (img.complete) {
+            loadedCount++;
+        } else {
+            img.onload = img.onerror = () => {
+                loadedCount++;
+                if (loadedCount === images.length) callback();
+            };
+        }
+    });
+
+    if (loadedCount === images.length) callback();
+}
+
+window.addEventListener("load", () => {
+    waitForImagesToLoad("memberCards", checkAllDone);
+    waitForImagesToLoad("supportingTeamCards", checkAllDone);
+    waitForImagesToLoad("nameListCards", checkAllDone);
+});
+
+let sectionsLoaded = 0;
+function checkAllDone() {
+    sectionsLoaded++;
+    if (sectionsLoaded === 3) {
+        document.getElementById("loaderOverlay").style.display = "none";
+    }
+}
