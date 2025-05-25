@@ -274,6 +274,10 @@ supportingTeams.push({
     name: "Jagabandhu Acharya",
     img: "images/members/JagaNa.jpg"
 });
+supportingTeams.push({
+    name: "Jitendra Kar",
+    img: "images/members/JituNana.jpg"
+});
 const supportingTeamCards = document.getElementById("supportingTeamCards");
 supportingTeams.forEach((m, i) => {
     const bg = festiveGradients[i % festiveGradients.length];
