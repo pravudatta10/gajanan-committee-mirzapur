@@ -261,18 +261,20 @@ section.visible {
 
 #memberCards .card-img-top {
     height: 250px;
-    object-fit: cover;
+    object-fit: contain;
     object-position: top 50%;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
+    padding-top: 5%;
 }
 
 #supportingTeamCards .card-img-top {
     height: 250px;
-    object-fit: cover;
-    object-position: top 30%;
+    object-fit: contain;
+    object-position: top 50%;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
+    padding-top: 5%;
 }
 
 
@@ -368,13 +370,6 @@ section.visible {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-#pdfCollection .card-img-top {
-    height: 250px;
-    /* Fixed height */
-    object-fit: cover;
-    /* Ensures the image fills the area */
-    width: 100%;
-}
 
 #pdfCollection .card-body {
     padding: 15px;
@@ -388,8 +383,7 @@ section.visible {
     height: 250px;
     width: 100%;
     object-fit: cover;
-    object-position: top 1%;
-    /* Keeps the top part, crops from the bottom */
+    object-position: top 50%; 
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
 }

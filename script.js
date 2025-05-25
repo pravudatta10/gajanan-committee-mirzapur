@@ -267,7 +267,7 @@ supportingTeams.push({
     img: "images/members/Lipunana.jpg"
 });
 supportingTeams.push({
-    name: "Jaga",
+    name: "Jagabandhu Acharya",
     img: "images/members/JagaNa.jpg"
 });
 const supportingTeamCards = document.getElementById("supportingTeamCards");
