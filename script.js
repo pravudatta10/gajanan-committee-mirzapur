@@ -482,7 +482,9 @@ window.addEventListener("load", () => {
 let sectionsLoaded = 0;
 function checkAllDone() {
     sectionsLoaded++;
-    if (sectionsLoaded === 3) {
-        document.getElementById("loaderOverlay").style.display = "none";
+    if (sectionsLoaded === 4) {
+     const loader = document.getElementById("loaderOverlay");
+    loader.classList.add("hide");
+    setTimeout(() => loader.style.display = "none", 500);
     }
 }
