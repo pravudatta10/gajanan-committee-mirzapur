@@ -1,5 +1,16 @@
 // Countdown Timer
 const targetDate = new Date('2025-08-27T00:00:00');
+const glowClasses = ["glow-red", "glow-green", "glow-blue", "glow-gold"];
+const festiveGradients = [
+    'linear-gradient(-45deg, #ff9a9e, #fad0c4, #fad0c4, #ff9a9e)',
+    'linear-gradient(-45deg, #fbc2eb, #a6c1ee, #fbc2eb, #a6c1ee)',
+    'linear-gradient(-45deg, #fddb92, #d1fdff, #fddb92, #d1fdff)',
+    'linear-gradient(-45deg, #84fab0, #8fd3f4, #84fab0, #8fd3f4)',
+    'linear-gradient(-45deg, #a18cd1, #fbc2eb, #a18cd1, #fbc2eb)',
+    'linear-gradient(-45deg, #ffecd2, #fcb69f, #ffecd2, #fcb69f)',
+    'linear-gradient(-45deg, #a1c4fd, #c2e9fb, #a1c4fd, #c2e9fb)',
+    'linear-gradient(-45deg, #ffdde1, #ee9ca7, #ffdde1, #ee9ca7)'
+];
 setInterval(() => {
     const now = new Date();
     const diff = targetDate - now;
@@ -178,14 +189,14 @@ members.push({
     img: "images/members/Sutula.jpg"
 });
 const memberCards = document.getElementById("memberCards");
-members.forEach(m => {
+members.forEach((m, i) => {
+    const bg = festiveGradients[i % festiveGradients.length];
     memberCards.innerHTML += `
     <div class="col-md-3 mb-4">
-      <div class="card text-center">
+      <div class="card text-center festive-card" style="background: ${bg}; background-size: 200% 200%; animation: gradientShift 10s ease infinite;">
         <img src="${m.img}" class="card-img-top" alt="${m.name}">
         <div class="card-body">
           <h5>${m.name}</h5>
-          <p>${m.phone}</p>
         </div>
       </div>
     </div>
@@ -207,7 +218,7 @@ supportingTeams.push({
     img: "images/members/adiKar.jpg"
 });
 supportingTeams.push({
-    name: "Aditya Khandual",
+    name: "Deepesh Khandual",
     img: "images/members/adiKhandual.jpg"
 });
 supportingTeams.push({
@@ -257,30 +268,30 @@ supportingTeams.push({
 supportingTeams.push({
     name: "Jaga",
     img: "images/members/JagaNa.jpg"
-}); 
+});
 const supportingTeamCards = document.getElementById("supportingTeamCards");
-supportingTeams.forEach(m => {
+supportingTeams.forEach((m, i) => {
+    const bg = festiveGradients[i % festiveGradients.length];
     supportingTeamCards.innerHTML += `
     <div class="col-md-3 mb-4">
-      <div class="card text-center">
+      <div class="card text-center festive-card" style="background: ${bg}; background-size: 200% 200%; animation: gradientShift 10s ease infinite;">
         <img src="${m.img}" class="card-img-top" alt="${m.name}">
         <div class="card-body">
-          <h5>${m.name}</h5> 
+          <h5>${m.name}</h5>
         </div>
       </div>
     </div>
   `;
 });
-
 // Language Toggle
-let isEnglish = true;
-document.getElementById("langToggle").addEventListener("click", () => {
-    isEnglish = !isEnglish;
-    document.getElementById("langToggle").innerText = isEnglish ? "ଓଡିଆ" : "English";
-    document.querySelector("#contact p").innerText = isEnglish ?
-        "Address: ମିର୍ଜ଼ାପୁର, ଓଡ଼ିଶା | Phone: 73288 61610" :
-        "ଠିକଣା: Mirjapur, Odisha | ଫୋନ: 73288 61610";
-});
+// let isEnglish = true;
+// document.getElementById("langToggle").addEventListener("click", () => {
+//     isEnglish = !isEnglish;
+//     document.getElementById("langToggle").innerText = isEnglish ? "ଓଡିଆ" : "English";
+//     document.querySelector("#contact p").innerText = isEnglish ?
+//         "Address: ମିର୍ଜ଼ାପୁର, ଓଡ଼ିଶା | Phone: 73288 61610" :
+//         "ଠିକଣା: Mirjapur, Odisha | ଫୋନ: 73288 61610";
+// });
 
 // Scroll Animations
 const observer = new IntersectionObserver(entries => {

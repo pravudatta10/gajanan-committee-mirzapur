@@ -82,23 +82,31 @@ iframe::after {
 }
 
 #countdown {
-  background: linear-gradient(90deg, #ff4e50, #f9d423, #24fe41, #00c9ff, #ff6ec4);
-  background-size: 400% 400%;
-  animation: countdownBgShift 10s ease infinite;
-  font-weight: bold;
-  font-size: 1.2rem;
-  color: #fff;
-  text-align: center;
-  padding: 10px 20px;
-  /* border-radius: 10px; */
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    background: linear-gradient(90deg, #ff4e50, #f9d423, #24fe41, #00c9ff, #ff6ec4);
+    background-size: 400% 400%;
+    animation: countdownBgShift 10s ease infinite;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #fff;
+    text-align: center;
+    padding: 10px 20px;
+    /* border-radius: 10px; */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Animate gradient for a lively effect */
 @keyframes countdownBgShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 
