@@ -1,35 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Gajanan Commit</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Official site for ଶ୍ରୀ ଗଜାନନ ପୂଜା କମିଟି ମିର୍ଜ଼ାପୁର ପାରିପୁଣ୍ଡିଲୋ">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <title>ଶ୍ରୀ ଗଜାନନ ପୂଜା କମିଟି ମିର୍ଜ଼ାପୁର ପାରିପୁଣ୍ଡିଲୋ</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Oriya&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
-<body>
-  <header>
-    <h1>🌺 Gajanan Commit 🌺</h1>
-    <p class="countdown">Ganesh Chaturthi in <span id="countdown"></span></p>
-  </header>
 
-  <section class="gallery">
-    <h2>📸Our Yearly History </h2>
-    <div class="cards">
-      <div class="card">
-        <img src="images/2021.jpg" alt="2021 Gajanan" />
-        <a href="pdfs/2021.pdf" target="_blank">View 2021 Collection</a>
-      </div>
-      <div class="card">
-        <img src="images/2022.jpg" alt="2022 Gajanan" />
-        <a href="pdfs/2022.pdf" target="_blank">View 2022 Collection</a>
-      </div>
-    </div>
-  </section>
+<body class="festive-background">
 
-  <footer>
-    <p>© Gajanan Commit | Jai Gajanan 🙏</p>
-  </footer>
 
-  <script src="script.js"></script>
+    <!-- Countdown Timer -->
+    <div id="countdown" class="text-center text-white py-2"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">ଶ୍ରୀ ଗଜାନନ ପୂଜା କମିଟି</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#collection">Collection</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#members">Members</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
+                </ul>
+                <button id="langToggle" class="btn btn-light">ଓଡିଆ</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="p-5 text-center bg-gradient">
+        <div class="container">
+            <h1 class="display-4 fetiveHeading">Welcome to ଶ୍ରୀ ଗଜାନନ ପୂଜା କମିଟି</h1>
+            <!-- <div id="homeCarousel" class="carousel slide mt-4" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active"><img src="images/home1.jpg" class="d-block w-100" alt="..." /></div>
+          <div class="carousel-item"><img src="images/home2.jpg" class="d-block w-100" alt="..." /></div>
+        </div>
+      </div> -->
+            <div>
+                <h3 class="display-10 blink">Upcoming Event</h3>
+                <!-- Notice Banner -->
+                <div id="noticeBanner" class="py-2 text-center fw-bold"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="p-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Gallery</h2>
+            <div id="galleryCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active"><img src="images/2024/image-6.jpg" class="d-block w-100"
+                            alt="..." /></div>
+                    <div class="carousel-item"><img src="images/2024/image-7.jpg" class="d-block w-100" alt="..." />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Archieve Section -->
+    <section id="collection" class="p-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Archive</h2>
+            <div class="row" id="pdfCollection"></div>
+        </div>
+    </section>
+
+    <!-- Members Section -->
+    <section id="members" class="p-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Members</h2>
+            <div class="row" id="memberCards"></div>
+        </div>
+    </section>
+    <!-- Supporting Team -->
+    <section id="members" class="p-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Supporting Team</h2>
+            <div class="row" id="supportingTeamCards"></div>
+        </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact" class="p-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Contact Us</h2>
+            <p class="text-center">Address: ମିର୍ଜ଼ାପୁର, ଓଡ଼ିଶା | Phone: 9999999999</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-white text-center py-3 bg-dark">
+        <p>&copy; 2025 ଶ୍ରୀ ଗଜାନନ ପୂଜା କମିଟି | All rights reserved</p>
+        <div class="social-icons">
+            <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="text-white me-3"><i class="bi bi-twitter"></i></a>
+        </div>
+        <button id="backToTop" class="btn btn-outline-light mt-2">Back to Top</button>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
