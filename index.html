@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Official site for ଶ୍ରୀ ଗଜାନନ ପୂଜା କମିଟି ମିର୍ଜ଼ାପୁର ପାରିପୁଣ୍ଡିଲୋ">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <!-- <link rel="icon" href="images/favicon.ico" type="image/x-icon"> -->
     <title>ଶ୍ରୀ ଗଜାନନ ପୂଜା କମିଟି ମିର୍ଜ଼ାପୁର ପାରିପୁଣ୍ଡିଲୋ</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Oriya&display=swap" rel="stylesheet">
@@ -30,7 +30,7 @@
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#collection">Collection</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#archive">Archive</a></li>
                     <li class="nav-item"><a class="nav-link" href="#members">Members</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
                 </ul>
@@ -42,7 +42,7 @@
     <!-- Home Section -->
     <section id="home" class="p-5 text-center bg-gradient">
         <div class="container">
-            <h1 class="display-4 fetiveHeading">Welcome to ଶ୍ରୀ ଗଜାନନ ପୂଜା କମିଟି</h1>
+            <h1 class="display-6 fetiveHeading">ଶ୍ରୀ ଗଜାନନ ପୂଜା କମିଟି (ମିର୍ଜ଼ାପୁର,ପାରିପୁଣ୍ଡିଲୋ)</h1>
             <!-- <div id="homeCarousel" class="carousel slide mt-4" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active"><img src="images/home1.jpg" class="d-block w-100" alt="..." /></div>
@@ -58,22 +58,28 @@
     </section>
 
     <!-- Gallery Section -->
-    <section id="gallery" class="p-5">
+    <section id="gallery" class="p-10">
         <div class="container">
             <h2 class="text-center mb-4">Gallery</h2>
+
             <div id="galleryCarousel" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active"><img src="images/2024/image-6.jpg" class="d-block w-100"
-                            alt="..." /></div>
-                    <div class="carousel-item"><img src="images/2024/image-7.jpg" class="d-block w-100" alt="..." />
-                    </div>
-                </div>
+                <div class="carousel-inner" id="galleryImages"></div>
+
+                <!-- Optional: Carousel controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
             </div>
         </div>
     </section>
 
     <!-- Archieve Section -->
-    <section id="collection" class="p-5">
+    <section id="archive" class="p-5">
         <div class="container">
             <h2 class="text-center mb-4">Archive</h2>
             <div class="row" id="pdfCollection"></div>
@@ -94,11 +100,20 @@
             <div class="row" id="supportingTeamCards"></div>
         </div>
     </section>
+    <!-- Name list -->
+    <section id="nameList" class="p-5 bg-white">
+        <div class="container">
+            <h2 class="text-center mb-4">With Best Regards</h2>
+            <div class="row" id="nameListCards"></div>
+        </div>
+    </section>
+
+
     <!-- Contact Section -->
     <section id="contact" class="p-5">
         <div class="container">
             <h2 class="text-center mb-4">Contact Us</h2>
-            <p class="text-center">Address: ମିର୍ଜ଼ାପୁର, ଓଡ଼ିଶା | Phone: 9999999999</p>
+            <p class="text-center">Address: ମିର୍ଜ଼ାପୁର, ଓଡ଼ିଶା | Phone: 7328861610</p>
         </div>
     </section>
 
@@ -109,7 +124,7 @@
             <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
             <a href="#" class="text-white me-3"><i class="bi bi-twitter"></i></a>
         </div>
-        <button id="backToTop" class="btn btn-outline-light mt-2">Back to Top</button>
+        <!-- <button id="backToTop" class="btn btn-outline-light mt-2">Back to Top</button> -->
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
