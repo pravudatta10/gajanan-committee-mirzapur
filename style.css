@@ -408,3 +408,15 @@ section.visible {
     margin-left: 20px;
     font-size: 1.2rem;
 }
+
+.festive-1 {
+    background: radial-gradient(circle at center, #ff8c00, #ffd700, #dd63a4, #00bcd4, #8bc34a, #ff4081);
+}
+
+.festive-2 {
+    background: radial-gradient(circle at center, #ff5f6d, #ffc371, #00c9ff, #92fe9d, #c471ed, #f7797d);
+}
+
+.festive-3 {
+    background: radial-gradient(circle at center, #fc466b, #3f5efb, #ff6ec4, #7873f5, #42e695, #88f7ea);
+}
